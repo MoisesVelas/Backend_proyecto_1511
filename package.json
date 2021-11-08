@@ -1,0 +1,33 @@
+{
+  "name": "backend_proyecto_1511",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoisesVelas/Backend_proyecto_1511.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MoisesVelas/Backend_proyecto_1511/issues"
+  },
+  "homepage": "https://github.com/MoisesVelas/Backend_proyecto_1511#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "fetch": "^1.1.0",
+    "my-sql": "^1.2.15",
+    "mysql2": "^2.3.3-rc.0",
+    "node": "^17.0.1",
+    "node-fetch": "^3.0.0",
+    "nodemon": "^2.0.14"
+  }
+}
