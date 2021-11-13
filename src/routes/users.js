@@ -24,10 +24,6 @@ router.get('/users/:id',async (req, res) => {
 });
 
 
-
-
-
-
 //crear usuario
 
 
@@ -49,7 +45,39 @@ router.post('/users' ,  async (req, res) => {
 });
 
 
+router.delete('/users/:id',async (req, res) => {
 
+    try {
+        const result = deleteUser(req.params.id)        
+        res.status(204).json(result)
+    } catch (error) {
+        
+    }   
+})
+
+
+
+
+//-------------UPDATE USERS 
+router.patch('/users/:id', async (req, res) => {
+
+    let id = req.params.id
+
+    let {name,email,pass} = req.body
+
+    const hashed_pass =  await hashearPassword(pass) 
+
+    let sql = `UPDATE users SET name = ${name}  WHERE id = ${id}`;
+
+
+    const [result, fields] =  await conn(sql,[name, email, hashed_pass])
+
+    res.json(result)
+
+    
+
+
+});
 
 
 
